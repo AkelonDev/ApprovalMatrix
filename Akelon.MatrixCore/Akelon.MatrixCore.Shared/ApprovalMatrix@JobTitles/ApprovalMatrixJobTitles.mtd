@@ -1,0 +1,66 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "b1dc1c42-9dd4-4725-be79-a610a859b09a",
+  "Name": "ApprovalMatrixJobTitles",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "ApprovalMatri2",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "4eb49a10-f8c3-4c66-8595-fa7881ea80a5",
+      "Name": "ApprovalMatrix",
+      "CanBeSearch": false,
+      "Code": "ApprovalMatrix",
+      "EntityGuid": "fd0166d0-592d-4453-b62e-83b51cc12def",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "c65cfc17-543b-4dc8-91e4-8eb6572180ec",
+      "Name": "JobTitle",
+      "CanBeSearch": false,
+      "Code": "JobTitle",
+      "EntityGuid": "4a37aec4-764c-4c14-8887-e1ecafa5b4c5",
+      "FlatListInStandaloneLookup": true,
+      "HandledEvents": [
+        "LookupServer"
+      ],
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "NeedPassEntityToLookupEvent": true,
+      "OnlyRootEntityUsedInChildLookupEvent": true,
+      "PreviousPropertyGuid": "4eb49a10-f8c3-4c66-8595-fa7881ea80a5"
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "d1dcbed3-9113-4d33-84f1-17809f4732f4",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "32a74d16-b0fa-41fa-b550-f7a04d30865c",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 11
+    }
+  ]
+}

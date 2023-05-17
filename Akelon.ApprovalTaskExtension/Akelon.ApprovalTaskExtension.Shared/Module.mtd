@@ -1,0 +1,70 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "0f4d02b1-f947-4e7c-a636-f050cbfb1ab1",
+  "Name": "ApprovalTaskExtension",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Akelon.ApprovalTaskExtension.Client",
+  "ClientBaseAssemblyName": "Akelon.ApprovalTaskExtension.ClientBase",
+  "ClientBaseNamespace": "Akelon.ApprovalTaskExtension.ClientBase",
+  "ClientNamespace": "Akelon.ApprovalTaskExtension.Client",
+  "Code": "Approva",
+  "CompanyCode": "Akelon",
+  "Cover": {
+    "NameGuid": "b7b23a31-a7b0-4128-868f-40e931e26763",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "2c880b8e-3108-49e9-a297-19cf45edbf6a",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "1c3bb1c4-e2a0-4cd2-9016-fe4544cc1965",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "df83a2ea-8d43-4ec4-a34a-2e61863014df",
+      "MaxVersion": "",
+      "MinVersion": "4.5.35.0"
+    }
+  ],
+  "DesktopViews": [],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "fda26839-dde5-4b81-998b-382575b0189e"
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Akelon.ApprovalTaskExtension",
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Akelon.ApprovalTaskExtension",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "Akelon.ApprovalTaskExtension.Server",
+  "ServerNamespace": "Akelon.ApprovalTaskExtension.Server",
+  "SharedAssemblyName": "Akelon.ApprovalTaskExtension.Shared",
+  "SharedNamespace": "Akelon.ApprovalTaskExtension.Shared",
+  "SpecialFolders": [],
+  "Version": "1.0.4535.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "02b71577-5f07-44db-9962-cb79ff5fe86e",
+  "Name": "MatrixCore",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Akelon.MatrixCore.Client",
+  "ClientBaseAssemblyName": "Akelon.MatrixCore.ClientBase",
+  "ClientBaseNamespace": "Akelon.MatrixCore.ClientBase",
+  "ClientNamespace": "Akelon.MatrixCore.Client",
+  "Code": "MatrixC",
+  "CompanyCode": "Akelon",
+  "Cover": {
+    "NameGuid": "26e05602-f0ac-45c5-a17d-9dc28fe7984d",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "b27e18f7-472c-4b63-878b-a6188eede7f1",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "494a7b62-0537-41ea-ab21-ebebaa82efa1",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "0f4d02b1-f947-4e7c-a636-f050cbfb1ab1",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "fd0166d0-592d-4453-b62e-83b51cc12def",
+      "PreviousItemId": "8f902186-0af4-4c46-b43e-7594dcc847b6"
+    },
+    {
+      "ItemId": "17c66c6f-a45b-42fc-968b-0349065ff5ae",
+      "PreviousItemId": "fd0166d0-592d-4453-b62e-83b51cc12def"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Akelon.MatrixCore",
+  "IsVisible": false,
+  "Overridden": [
+    "IsVisible"
+  ],
+  "PublicConstants": [
+    {
+      "Name": "ModuleRole",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.Guid",
+      "Value": "new System.Guid(\"B6B7870E-6203-4E0D-8966-C5F24D3BC167\")"
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetMatchingMatrices",
+      "Parameters": [
+        {
+          "Name": "roleType",
+          "ParameterType": "global::System.Nullable<global::Sungero.Core.Enumeration>",
+          "ParameterTypeFullName": "System.Nullable"
+        },
+        {
+          "Name": "documentKind",
+          "ParameterType": "global::Sungero.Docflow.IDocumentKind",
+          "ParameterTypeFullName": "Sungero.Docflow.IDocumentKind, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "category",
+          "ParameterType": "global::Sungero.Docflow.IDocumentGroupBase",
+          "ParameterTypeFullName": "Sungero.Docflow.IDocumentGroupBase, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "unit",
+          "ParameterType": "global::Sungero.Company.IBusinessUnit",
+          "ParameterTypeFullName": "Sungero.Company.IBusinessUnit, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "department",
+          "ParameterType": "global::Sungero.Company.IDepartment",
+          "ParameterTypeFullName": "Sungero.Company.IDepartment, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "jobTitle",
+          "ParameterType": "global::Sungero.Company.IJobTitle",
+          "ParameterTypeFullName": "Sungero.Company.IJobTitle, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "System.Collections.Generic.IEnumerable<global::Akelon.MatrixCore.IApprovalMatrix>"
+    },
+    {
+      "Name": "GetMatrixApprovalRoleRecipients",
+      "Parameters": [
+        {
+          "Name": "doc",
+          "ParameterType": "global::Sungero.Docflow.IOfficialDocument",
+          "ParameterTypeFullName": "Sungero.Docflow.IOfficialDocument, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "roleType",
+          "ParameterType": "global::System.Nullable<global::Sungero.Core.Enumeration>",
+          "ParameterTypeFullName": "System.Nullable"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::Sungero.CoreEntities.IRecipient>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetMatrixApprovalRoleRecipients",
+      "Parameters": [
+        {
+          "Name": "roleType",
+          "ParameterType": "global::System.Nullable<global::Sungero.Core.Enumeration>",
+          "ParameterTypeFullName": "System.Nullable"
+        },
+        {
+          "Name": "documentKind",
+          "ParameterType": "global::Sungero.Docflow.IDocumentKind",
+          "ParameterTypeFullName": "Sungero.Docflow.IDocumentKind, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "category",
+          "ParameterType": "global::Sungero.Docflow.IDocumentGroupBase",
+          "ParameterTypeFullName": "Sungero.Docflow.IDocumentGroupBase, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "unit",
+          "ParameterType": "global::Sungero.Company.IBusinessUnit",
+          "ParameterTypeFullName": "Sungero.Company.IBusinessUnit, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "department",
+          "ParameterType": "global::Sungero.Company.IDepartment",
+          "ParameterTypeFullName": "Sungero.Company.IDepartment, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "jobTitle",
+          "ParameterType": "global::Sungero.Company.IJobTitle",
+          "ParameterTypeFullName": "Sungero.Company.IJobTitle, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::Sungero.CoreEntities.IRecipient>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Akelon.MatrixCore",
+  "ResourcesKeys": [
+    "ModuleRoleName"
+  ],
+  "ServerAssemblyName": "Akelon.MatrixCore.Server",
+  "ServerNamespace": "Akelon.MatrixCore.Server",
+  "SharedAssemblyName": "Akelon.MatrixCore.Shared",
+  "SharedNamespace": "Akelon.MatrixCore.Shared",
+  "SpecialFolders": [],
+  "Version": "1.0.4535.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}
