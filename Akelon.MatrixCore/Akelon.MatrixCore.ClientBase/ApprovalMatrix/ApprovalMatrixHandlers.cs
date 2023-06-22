@@ -12,7 +12,7 @@ namespace Akelon.MatrixCore
 
     public override void Closing(Sungero.Presentation.FormClosingEventArgs e)
     {
-      if(e.Params.Contains(Constants.ApprovalMatrix.KindIdsWithGroupParam))
+      if (e.Params.Contains(Constants.ApprovalMatrix.KindIdsWithGroupParam))
         e.Params.Remove(Constants.ApprovalMatrix.KindIdsWithGroupParam);
     }
 

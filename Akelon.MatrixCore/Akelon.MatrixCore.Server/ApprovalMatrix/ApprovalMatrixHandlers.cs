@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -52,17 +52,6 @@ namespace Akelon.MatrixCore
     {
       var members = _root.Members.Where(m => !Equals(_obj.Member, m.Member) && m.Member != null).Select(m => m.Member).ToList();
       return query.Where(m => !members.Contains(m));
-    }
-  }
-
-  partial class ApprovalMatrixServerHandlers
-  {
-    public override void BeforeSave(Sungero.Domain.BeforeSaveEventArgs e)
-    {
-      // Очистка пустых строк.
-      _obj.Members.Where(m => m.Member == null)
-        .ToList()
-        .ForEach(m => _obj.Members.Remove(m));
     }
   }
 }

@@ -9,22 +9,6 @@ namespace Akelon.MatrixCore.Server
   public class ModuleFunctions
   {
     /// <summary>
-    /// Получить исполнителей роли согласования по матрице согласования.
-    /// </summary>
-    /// <param name="doc">Согласуемый документ.</param>
-    /// <param name="roleType">Тип роли.</param>
-    /// <returns>Исполнители роли согласования.</returns>
-    [Public]
-    public virtual List<IRecipient> GetMatrixApprovalRoleRecipients(Sungero.Docflow.IOfficialDocument doc, Enumeration? roleType)
-    {
-      var employee = GetEmployeeByDoc(doc);
-      if (employee == null)
-        return new List<IRecipient>();
-
-      return GetMatrixApprovalRoleRecipients(roleType, doc.DocumentKind, doc.DocumentGroup, employee.Department.BusinessUnit, employee.Department, employee.JobTitle);
-    }
-    
-    /// <summary>
     /// Получить сотрудника по документу.
     /// </summary>
     /// <param name="doc">Документ.</param>
@@ -49,71 +33,63 @@ namespace Akelon.MatrixCore.Server
     }
     
     /// <summary>
-    /// Получить исполнителей роли согласования по матрице согласования.
-    /// </summary>
-    /// <param name="roleType">Тип роли.</param>
-    /// <param name="documentKind">Вид документа.</param>
-    /// <param name="category">Категория документа.</param>
-    /// <param name="unit">Наша организация.</param>
-    /// <param name="department">Подразделение.</param>
-    /// <param name="jobTitle">Должность.</param>
-    /// <returns>Исполнители роли согласования.</returns>
-    [Public]
-    public virtual List<IRecipient> GetMatrixApprovalRoleRecipients(Enumeration? roleType,
-                                                                    Sungero.Docflow.IDocumentKind documentKind,
-                                                                    Sungero.Docflow.IDocumentGroupBase category,
-                                                                    Sungero.Company.IBusinessUnit unit,
-                                                                    Sungero.Company.IDepartment department,
-                                                                    Sungero.Company.IJobTitle jobTitle)
-    {
-      var matrice = GetMatchingMatrices(roleType, documentKind, category, unit, department, jobTitle).FirstOrDefault();
-      
-      if (matrice == null)
-        return new List<IRecipient>();
-      
-      return matrice.Members.Select(m => m.Member).Distinct().ToList();
-    }
-    
-    /// <summary>
     /// Получить матрицы, соответствующие критериям.
     /// </summary>
+    /// <param name="doc">Согласуемый документ.</param>
+    /// <param name="employee">Сотрудник.</param>
     /// <param name="roleType">Тип роли.</param>
-    /// <param name="documentKind">Вид документа.</param>
-    /// <param name="category">Категория документа.</param>
-    /// <param name="unit">Наша организация.</param>
-    /// <param name="department">Подразделение.</param>
-    /// <param name="jobTitle">Должность.</param>
     /// <returns>Матрицы согласований.</returns>
     [Public]
-    public virtual System.Collections.Generic.IEnumerable<IApprovalMatrix> GetMatchingMatrices(Enumeration? roleType,
-                                                                                               Sungero.Docflow.IDocumentKind documentKind,
-                                                                                               Sungero.Docflow.IDocumentGroupBase category,
-                                                                                               Sungero.Company.IBusinessUnit unit,
-                                                                                               Sungero.Company.IDepartment department,
-                                                                                               Sungero.Company.IJobTitle jobTitle)
+    public virtual System.Collections.Generic.IEnumerable<IApprovalMatrix> GetMatchingMatrices(Sungero.Docflow.IOfficialDocument doc, Sungero.Company.IEmployee employee, Enumeration? roleType)
     {
       // Найти участников роли согласования по записям матрицы согласования по критериям.
       // Полученные записи сортируются по количеству совпавших критериев, при этом поля матрицы с отсутствующим значеним считаются релевантными, но с низким приоритетом.
       // Затем записи сортируются по приоритету (соотвествующее поле матрицы согласования).
-
+      var documentKind = doc.DocumentKind;
+      var category = doc.DocumentGroup;
+      var businessUnit = employee.Department.BusinessUnit;
+      var department = employee.Department;
+      var jobTitle = employee.JobTitle;
+      
       return ApprovalMatrices.GetAll(matrix => (matrix.ApprovalRole.Type == roleType) &&
                                      (matrix.Status == Sungero.CoreEntities.DatabookEntry.Status.Active) &&
                                      (matrix.DocumentKinds.Any(kinds => Equals(kinds.DocumentKind, documentKind))) &&
                                      (matrix.Categories.Any(categories => Equals(categories.Category, category)) || !matrix.Categories.Any() || category == null) &&
-                                     (matrix.BusinessUnits.Any(units => Equals(units.BusinessUnit, unit)) || !matrix.BusinessUnits.Any()) &&
+                                     (matrix.BusinessUnits.Any(units => Equals(units.BusinessUnit, businessUnit)) || !matrix.BusinessUnits.Any()) &&
                                      (matrix.Departments.Any(departments => Equals(departments.Department, department)) || !matrix.Departments.Any()) &&
                                      (matrix.JobTitles.Any(titles => Equals(titles.JobTitle, jobTitle)) || !matrix.JobTitles.Any())
                                     )
         // Отсортировать найденные записи по релевантности.
         .ToDictionary(x => x,
                       x => (x.Categories.Any(c => Equals(c.Category, category)) ? 1 : 0)
-                      + (x.BusinessUnits.Any(b => Equals(b.BusinessUnit, unit)) ? 1 : 0)
+                      + (x.BusinessUnits.Any(b => Equals(b.BusinessUnit, businessUnit)) ? 1 : 0)
                       + (x.Departments.Any(d => Equals(d.Department, department)) ? 1 : 0)
                       + (x.JobTitles.Any(t => Equals(t.JobTitle, jobTitle)) ? 1 : 0)
                      )
         .OrderByDescending(x => x.Value)
         .ThenByDescending(x => x.Key.Priority)
         .Select(x => x.Key);
+    }
+    
+    /// <summary>
+    /// Получить исполнителей роли согласования по матрице согласования.
+    /// </summary>
+    /// <param name="doc">Согласуемый документ.</param>
+    /// <param name="roleType">Тип роли.</param>
+    /// <returns>Исполнители роли согласования.</returns>
+    [Public]
+    public virtual List<IRecipient> GetMatrixApprovalRoleRecipients(Sungero.Docflow.IOfficialDocument doc, Enumeration? roleType)
+    {
+      var employee = GetEmployeeByDoc(doc);
+      if (employee == null)
+        return new List<IRecipient>();
+
+      var matrice = GetMatchingMatrices(doc, employee, roleType).FirstOrDefault();
+      
+      if (matrice == null)
+        return new List<IRecipient>();
+      
+      return matrice.Members.Select(m => m.Member).Distinct().ToList();
     }
   }
 }
