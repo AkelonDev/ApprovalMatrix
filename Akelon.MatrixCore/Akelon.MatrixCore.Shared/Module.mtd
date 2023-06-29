@@ -68,34 +68,19 @@
       "Name": "GetMatchingMatrices",
       "Parameters": [
         {
+          "Name": "doc",
+          "ParameterType": "global::Sungero.Docflow.IOfficialDocument",
+          "ParameterTypeFullName": "Sungero.Docflow.IOfficialDocument, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "employee",
+          "ParameterType": "global::Sungero.Company.IEmployee",
+          "ParameterTypeFullName": "Sungero.Company.IEmployee, Sungero.Domain.Interfaces"
+        },
+        {
           "Name": "roleType",
           "ParameterType": "global::System.Nullable<global::Sungero.Core.Enumeration>",
           "ParameterTypeFullName": "System.Nullable"
-        },
-        {
-          "Name": "documentKind",
-          "ParameterType": "global::Sungero.Docflow.IDocumentKind",
-          "ParameterTypeFullName": "Sungero.Docflow.IDocumentKind, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "category",
-          "ParameterType": "global::Sungero.Docflow.IDocumentGroupBase",
-          "ParameterTypeFullName": "Sungero.Docflow.IDocumentGroupBase, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "unit",
-          "ParameterType": "global::Sungero.Company.IBusinessUnit",
-          "ParameterTypeFullName": "Sungero.Company.IBusinessUnit, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "department",
-          "ParameterType": "global::Sungero.Company.IDepartment",
-          "ParameterTypeFullName": "Sungero.Company.IDepartment, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "jobTitle",
-          "ParameterType": "global::Sungero.Company.IJobTitle",
-          "ParameterTypeFullName": "Sungero.Company.IJobTitle, Sungero.Domain.Interfaces"
         }
       ],
       "ReturnType": "System.Collections.Generic.IEnumerable<global::Akelon.MatrixCore.IApprovalMatrix>"
@@ -112,43 +97,6 @@
           "Name": "roleType",
           "ParameterType": "global::System.Nullable<global::Sungero.Core.Enumeration>",
           "ParameterTypeFullName": "System.Nullable"
-        }
-      ],
-      "ReturnType": "global::System.Collections.Generic.List<global::Sungero.CoreEntities.IRecipient>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
-    },
-    {
-      "Name": "GetMatrixApprovalRoleRecipients",
-      "Parameters": [
-        {
-          "Name": "roleType",
-          "ParameterType": "global::System.Nullable<global::Sungero.Core.Enumeration>",
-          "ParameterTypeFullName": "System.Nullable"
-        },
-        {
-          "Name": "documentKind",
-          "ParameterType": "global::Sungero.Docflow.IDocumentKind",
-          "ParameterTypeFullName": "Sungero.Docflow.IDocumentKind, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "category",
-          "ParameterType": "global::Sungero.Docflow.IDocumentGroupBase",
-          "ParameterTypeFullName": "Sungero.Docflow.IDocumentGroupBase, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "unit",
-          "ParameterType": "global::Sungero.Company.IBusinessUnit",
-          "ParameterTypeFullName": "Sungero.Company.IBusinessUnit, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "department",
-          "ParameterType": "global::Sungero.Company.IDepartment",
-          "ParameterTypeFullName": "Sungero.Company.IDepartment, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "jobTitle",
-          "ParameterType": "global::Sungero.Company.IJobTitle",
-          "ParameterTypeFullName": "Sungero.Company.IJobTitle, Sungero.Domain.Interfaces"
         }
       ],
       "ReturnType": "global::System.Collections.Generic.List<global::Sungero.CoreEntities.IRecipient>",

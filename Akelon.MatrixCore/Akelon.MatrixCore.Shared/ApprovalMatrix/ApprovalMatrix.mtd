@@ -161,7 +161,7 @@
           "Name": "Departments",
           "ColumnNumber": 0,
           "ColumnSpan": 1,
-          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.MultiSelectEditorToCollectionBinder",
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.MultiSelectFromListEditorToCollectionBinder",
           "ParentGuid": "bd5d24a5-5382-4c02-9e3f-774ffe543aea",
           "PropertyGuid": "448c66fe-ca64-4bd4-9c13-db0f5796f242",
           "RowNumber": 1,
@@ -179,7 +179,7 @@
           "Name": "JobTitles",
           "ColumnNumber": 0,
           "ColumnSpan": 1,
-          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.MultiSelectEditorToCollectionBinder",
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.MultiSelectFromListEditorToCollectionBinder",
           "ParentGuid": "bd5d24a5-5382-4c02-9e3f-774ffe543aea",
           "PropertyGuid": "d6abb7fb-b5db-4892-9916-c922fb347d60",
           "RowNumber": 2,
@@ -215,7 +215,6 @@
     }
   ],
   "HandledEvents": [
-    "BeforeSaveServer",
     "RefreshClient",
     "ClosingClient"
   ],
