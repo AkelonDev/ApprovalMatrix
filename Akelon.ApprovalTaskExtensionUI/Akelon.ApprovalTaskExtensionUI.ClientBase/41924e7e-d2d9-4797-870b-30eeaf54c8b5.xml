@@ -33,8 +33,8 @@
             <property name="ExtendedVisibleIndex">1</property>
             <property name="Visible">false</property>
             <property name="AutoFilterCondition">Equals</property>
-            <property name="Name">Integer_ID</property>
-            <property name="FieldName">Integer_ID</property>
+            <property name="Name">LongInteger_ID</property>
+            <property name="FieldName">LongInteger_ID</property>
             <property name="VisibleIndex">1</property>
             <property name="SortMode">Custom</property>
             <property name="ActualWidth">NaN</property>

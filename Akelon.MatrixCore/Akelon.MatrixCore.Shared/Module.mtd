@@ -49,6 +49,8 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "Akelon.MatrixCore",
+  "IsolatedAssemblyName": "Akelon.MatrixCore.Isolated",
+  "IsolatedNamespace": "Akelon.MatrixCore.Isolated",
   "IsVisible": false,
   "Overridden": [
     "IsVisible"
@@ -114,7 +116,7 @@
   "SharedAssemblyName": "Akelon.MatrixCore.Shared",
   "SharedNamespace": "Akelon.MatrixCore.Shared",
   "SpecialFolders": [],
-  "Version": "1.0.4535.0",
+  "Version": "1.0.4733.0",
   "Widgets": [],
   "Versions": [
     {

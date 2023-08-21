@@ -28,7 +28,7 @@
     {
       "Id": "df83a2ea-8d43-4ec4-a34a-2e61863014df",
       "MaxVersion": "",
-      "MinVersion": "4.5.35.0"
+      "MinVersion": "4.7.33.0"
     }
   ],
   "DesktopViews": [],
@@ -41,6 +41,8 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "Akelon.ApprovalTaskExtension",
+  "IsolatedAssemblyName": "Akelon.ApprovalTaskExtension.Isolated",
+  "IsolatedNamespace": "Akelon.ApprovalTaskExtension.Isolated",
   "OrderedSpecialFolders": [],
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
@@ -51,7 +53,7 @@
   "SharedAssemblyName": "Akelon.ApprovalTaskExtension.Shared",
   "SharedNamespace": "Akelon.ApprovalTaskExtension.Shared",
   "SpecialFolders": [],
-  "Version": "1.0.4535.0",
+  "Version": "1.0.4733.0",
   "Widgets": [],
   "Versions": [
     {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -18,7 +18,7 @@ namespace Akelon.MatrixCore
 
     public override void Refresh(Sungero.Presentation.FormRefreshEventArgs e)
     {
-      List<int> kindIdsWithGroup;
+      List<long> kindIdsWithGroup;
       e.Params.TryGetValue(Constants.ApprovalMatrix.KindIdsWithGroupParam, out kindIdsWithGroup);
       
       if (kindIdsWithGroup == null)

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -14,7 +14,7 @@ namespace Akelon.MatrixCore.Server
     /// </summary>
     /// <returns>Список ИД видов документов.</returns>
     [Remote]
-    public static List<int> GetKindIdsWithGroup()
+    public static List<long> GetKindIdsWithGroup()
     {
       return Sungero.Docflow.DocumentGroupBases.GetAll().SelectMany(g => g.DocumentKinds.Select(r => r.DocumentKind.Id)).Distinct().ToList();
     }

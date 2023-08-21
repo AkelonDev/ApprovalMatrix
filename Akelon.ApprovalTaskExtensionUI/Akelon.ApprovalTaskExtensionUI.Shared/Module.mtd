@@ -67,6 +67,8 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "Akelon.ApprovalTaskExtensionUI",
+  "IsolatedAssemblyName": "Akelon.ApprovalTaskExtensionUI.Isolated",
+  "IsolatedNamespace": "Akelon.ApprovalTaskExtensionUI.Isolated",
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "Akelon.ApprovalTaskExtensionUI",
@@ -91,7 +93,7 @@
       "NeedShowMarkedCount": false
     }
   ],
-  "Version": "1.0.4535.0",
+  "Version": "1.0.4733.0",
   "Widgets": [],
   "Versions": [
     {
