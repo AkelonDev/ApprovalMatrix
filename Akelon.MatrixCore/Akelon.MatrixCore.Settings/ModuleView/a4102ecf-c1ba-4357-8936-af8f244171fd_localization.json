@@ -1,0 +1,33 @@
+{
+  "$type": "Sungero.NoCode.Settings.Models.SettingsLayerLocalization, Sungero.NoCode.Settings.Interfaces",
+  "_Title_56b2a018dc094ee28bec03eee4a7edf2": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "Approval task extension",
+    "ru-RU": "Расширение согласования по регламенту"
+  },
+  "_Description_56b2a018dc094ee28bec03eee4a7edf2": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "The module is designed to expand the functionality of approval tasks",
+    "ru-RU": "Модуль предназначен для расширения функциональности задач согласования по регламенту"
+  },
+  "Tab_Title_bc36df6f14854534b669cba6e881955d": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "Main Tab",
+    "ru-RU": "Основная вкладка"
+  },
+  "Group_Title_98faae024a9848b2830773717e10741e": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "Main group",
+    "ru-RU": "Основное"
+  },
+  "Action_Title_661da7bc95a7407eb1986edd697232e9": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "Approval matrices",
+    "ru-RU": "Матрицы согласования"
+  },
+  "Action_Description_661da7bc95a7407eb1986edd697232e9": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "Reference for setting up approval matrix",
+    "ru-RU": "Справочник для настройки матрицы согласования"
+  }
+}

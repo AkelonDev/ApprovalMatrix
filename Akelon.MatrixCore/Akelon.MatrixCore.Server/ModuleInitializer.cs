@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -19,20 +19,6 @@ namespace Akelon.MatrixCore.Server
       // Выдать права на справочники.
       InitializationLogger.Debug("Init: Grant rights on databooks.");
       GrantRightsOnDatabooks();
-      // Выдать права на специальные папки.
-      InitializationLogger.Debug("Init: Grant rights on folders.");
-      GrantRightsOnFolders();
-    }
-    
-    /// <summary>
-    /// Выдать права на специальные папки.
-    /// </summary>
-    public void GrantRightsOnFolders()
-    {
-      var moduleRole = Roles.GetAll(p => p.Sid == Constants.Module.ModuleRole).FirstOrDefault();
-      
-      ApprovalTaskExtensionUI.SpecialFolders.ApprovalMatrices.AccessRights.Grant(moduleRole, DefaultAccessRightsTypes.Read);
-      ApprovalTaskExtensionUI.SpecialFolders.ApprovalMatrices.AccessRights.Save();
     }
     
     /// <summary>
@@ -45,10 +31,10 @@ namespace Akelon.MatrixCore.Server
       
       ApprovalMatrices.AccessRights.Grant(moduleRole, DefaultAccessRightsTypes.FullAccess);
       ApprovalMatrices.AccessRights.Grant(allUsers, DefaultAccessRightsTypes.Read);
-			ApprovalMatrices.AccessRights.Save();
-			
-			ApprovalRoles.AccessRights.Grant(allUsers, DefaultAccessRightsTypes.Read);
-			ApprovalRoles.AccessRights.Save();
+      ApprovalMatrices.AccessRights.Save();
+      
+      ApprovalRoles.AccessRights.Grant(allUsers, DefaultAccessRightsTypes.Read);
+      ApprovalRoles.AccessRights.Save();
     }
     
     /// <summary>
@@ -56,16 +42,10 @@ namespace Akelon.MatrixCore.Server
     /// </summary>
     public void CreateModuleRole()
     {
-      // Пользователи модуля
-      var roleGuid = Constants.Module.ModuleRole;
-      
-      var role = Sungero.CoreEntities.Roles.GetAll(p => p.Sid == roleGuid).FirstOrDefault();
-      if (role != null)
-        return;
-      
       InitializationLogger.Debug("Init: Create module role.");
       var name = Akelon.MatrixCore.Resources.ModuleRoleName;
-      role = Sungero.Docflow.PublicInitializationFunctions.Module.CreateRole(name, name, roleGuid);
+      // Пользователи модуля
+      Sungero.Docflow.PublicInitializationFunctions.Module.CreateRole(name, name, Constants.Module.ModuleRole);
     }
     
     /// <summary>
