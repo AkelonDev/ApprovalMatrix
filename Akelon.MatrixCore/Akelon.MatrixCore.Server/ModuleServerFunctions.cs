@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -8,6 +8,29 @@ namespace Akelon.MatrixCore.Server
 {
   public class ModuleFunctions
   {
+    /// <summary>
+    /// Вычислить исполнителей по матрице согласования.
+    /// </summary>
+    /// <param name="task">Документ по которому ищутся критерии.</param>
+    /// <returns>Список исполнителей.</returns>
+    [ExpressionElement("GetMatrixPerformersName")]
+    public static List<Sungero.Company.IEmployee> GetMatrixPerformers(Sungero.Docflow.IOfficialDocument document)
+    {
+      return GetMatrixPerformers(document, null);
+    }
+    
+    /// <summary>
+    /// Вычислить исполнителей по матрице согласования.
+    /// </summary>
+    /// <param name="task">Документ по которому ищутся критерии.</param>
+    /// /// <param name="roleType">Тип роли, null если для no-code.</param>
+    /// <returns>Список исполнителей.</returns>
+    public static List<Sungero.Company.IEmployee> GetMatrixPerformers(Sungero.Docflow.IOfficialDocument document, Enumeration? roleType)
+    {
+      var recipients = Functions.Module.GetMatrixApprovalRoleRecipients(document, roleType);
+      return Sungero.Company.PublicFunctions.Module.GetEmployeesFromRecipients(recipients);
+    }
+    
     /// <summary>
     /// Получить сотрудника по документу.
     /// </summary>
@@ -51,7 +74,7 @@ namespace Akelon.MatrixCore.Server
       var department = employee.Department;
       var jobTitle = employee.JobTitle;
       
-      return ApprovalMatrices.GetAll(matrix => (matrix.ApprovalRole.Type == roleType) &&
+      return ApprovalMatrices.GetAll(matrix => (roleType == null ? (matrix.ApprovalRole == null) : (matrix.ApprovalRole.Type == roleType)) &&
                                      (matrix.Status == Sungero.CoreEntities.DatabookEntry.Status.Active) &&
                                      (matrix.DocumentKinds.Any(kinds => Equals(kinds.DocumentKind, documentKind))) &&
                                      (matrix.Categories.Any(categories => Equals(categories.Category, category)) || !matrix.Categories.Any() || category == null) &&

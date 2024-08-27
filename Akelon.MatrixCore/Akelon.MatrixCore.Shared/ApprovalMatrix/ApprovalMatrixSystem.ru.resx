@@ -103,4 +103,7 @@
   <data name="ControlGroup_0d67460235c14cfc91598bc045527d8c" xml:space="preserve">
     <value>Участники</value>
   </data>
+  <data name="Property_ForNoCode" xml:space="preserve">
+    <value>Для no-code</value>
+  </data>
 </root>

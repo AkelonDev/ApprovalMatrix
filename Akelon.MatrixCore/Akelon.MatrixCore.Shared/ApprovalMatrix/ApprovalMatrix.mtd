@@ -210,13 +210,27 @@
           "RowNumber": 0,
           "RowSpan": 1,
           "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "bfc2d287-3b4d-4277-94c6-72e98bb37682",
+          "Name": "ForNoCode",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+          "ParentGuid": "c7264be3-ebeb-447d-a3ee-646683fb9a0f",
+          "PropertyGuid": "aba6b10b-a15f-41a9-99e9-a28c64cc40e6",
+          "RowNumber": 3,
+          "RowSpan": 1,
+          "Settings": []
         }
       ]
     }
   ],
   "HandledEvents": [
     "RefreshClient",
-    "ClosingClient"
+    "ClosingClient",
+    "CreatedServer"
   ],
   "IconResourcesKeys": [],
   "IntegrationServiceName": "MatrixCoreApprovalMatrix",
@@ -255,7 +269,6 @@
       "Code": "ApprovalRole",
       "EntityGuid": "17c66c6f-a45b-42fc-968b-0349065ff5ae",
       "FlatListInStandaloneLookup": true,
-      "IsRequired": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
       "PreviousPropertyGuid": "c79eb7d1-abfe-4ffc-8342-be3e333b7588"
     },
@@ -331,6 +344,17 @@
       "EntityGuid": "9973659b-7693-45f3-a1f0-98ffd9eb2e7f",
       "IsShowedInList": false,
       "PreviousPropertyGuid": "cd97c8fa-cc99-419f-8ab7-4bc764ea9d40"
+    },
+    {
+      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "aba6b10b-a15f-41a9-99e9-a28c64cc40e6",
+      "Name": "ForNoCode",
+      "Code": "ForNoCode",
+      "HandledEvents": [
+        "ChangedShared"
+      ],
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+      "PreviousPropertyGuid": "522bfa41-a4d6-47bb-9066-e26f31adbb1c"
     }
   ],
   "PublicStructures": [],

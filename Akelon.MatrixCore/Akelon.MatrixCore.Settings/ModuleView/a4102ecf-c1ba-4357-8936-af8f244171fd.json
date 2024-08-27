@@ -68,7 +68,6 @@
     "Background": null,
     "BackgroundPosition": 0
   },
-  "Description": null,
   "Priority": 10,
   "ExplorerModule": {
     "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",

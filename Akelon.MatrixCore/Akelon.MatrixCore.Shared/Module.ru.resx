@@ -61,4 +61,7 @@
   <data name="ModuleRoleName" xml:space="preserve">
     <value>Пользователи настраивающие матрицы согласования</value>
   </data>
+  <data name="GetMatrixPerformersName" xml:space="preserve">
+    <value>Получить исполнителей по матрице согласования</value>
+  </data>
 </root>

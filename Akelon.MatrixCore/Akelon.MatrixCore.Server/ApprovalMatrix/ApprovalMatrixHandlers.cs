@@ -7,6 +7,15 @@ using Akelon.MatrixCore.ApprovalMatrix;
 
 namespace Akelon.MatrixCore
 {
+  partial class ApprovalMatrixServerHandlers
+  {
+
+    public override void Created(Sungero.Domain.CreatedEventArgs e)
+    {
+      _obj.ForNoCode = false;
+    }
+  }
+
   partial class ApprovalMatrixCategoriesCategoryPropertyFilteringServerHandler<T>
   {
 

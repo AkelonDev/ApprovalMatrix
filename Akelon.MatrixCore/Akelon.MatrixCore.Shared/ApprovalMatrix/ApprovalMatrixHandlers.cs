@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -9,6 +9,11 @@ namespace Akelon.MatrixCore
 {
   partial class ApprovalMatrixSharedHandlers
   {
+
+    public virtual void ForNoCodeChanged(Sungero.Domain.Shared.BooleanPropertyChangedEventArgs e)
+    {
+      _obj.ApprovalRole = null;
+    }
 
     public virtual void DocumentKindsChanged(Sungero.Domain.Shared.CollectionPropertyChangedEventArgs e)
     {

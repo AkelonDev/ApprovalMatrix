@@ -26,8 +26,10 @@ namespace Akelon.MatrixCore
         kindIdsWithGroup = Functions.ApprovalMatrix.Remote.GetKindIdsWithGroup();
         e.Params.AddOrUpdate(Constants.ApprovalMatrix.KindIdsWithGroupParam, kindIdsWithGroup);
       }
-      
-      _obj.State.Properties.Categories.IsVisible = _obj.DocumentKinds.Any(r => kindIdsWithGroup.Contains(r.DocumentKind.Id));
+      var properties = _obj.State.Properties;
+      properties.Categories.IsVisible = _obj.DocumentKinds.Any(r => kindIdsWithGroup.Contains(r.DocumentKind.Id));
+      properties.ApprovalRole.IsRequired = _obj.ForNoCode != true;
+      properties.ApprovalRole.IsVisible = _obj.ForNoCode != true;
     }
   }
 }

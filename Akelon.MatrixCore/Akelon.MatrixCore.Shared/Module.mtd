@@ -110,7 +110,8 @@
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "Akelon.MatrixCore",
   "ResourcesKeys": [
-    "ModuleRoleName"
+    "ModuleRoleName",
+    "GetMatrixPerformersName"
   ],
   "ServerAssemblyName": "Akelon.MatrixCore.Server",
   "ServerNamespace": "Akelon.MatrixCore.Server",

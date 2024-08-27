@@ -61,4 +61,7 @@
   <data name="ModuleRoleName" xml:space="preserve">
     <value>Users setting up approval matrices</value>
   </data>
+  <data name="GetMatrixPerformersName" xml:space="preserve">
+    <value>Get performers using the approval matrix</value>
+  </data>
 </root>

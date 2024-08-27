@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -19,8 +19,7 @@ namespace Akelon.MatrixCore.Server
     {
       var document = task.DocumentGroup.OfficialDocuments.FirstOrDefault();
       
-      var recipients = Functions.Module.GetMatrixApprovalRoleRecipients(document, _obj.Type);
-      return Sungero.Company.PublicFunctions.Module.GetEmployeesFromRecipients(recipients);
+      return Functions.Module.GetMatrixPerformers(document, _obj.Type);
     }
   }
 }
