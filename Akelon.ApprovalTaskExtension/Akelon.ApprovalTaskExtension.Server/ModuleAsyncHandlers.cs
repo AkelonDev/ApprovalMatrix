@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace Akelon.ApprovalTaskExtension.Server
 {
-  public class ModuleAsyncHandlers
+  public partial class ModuleAsyncHandlers
   {
 
   }

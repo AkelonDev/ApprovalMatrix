@@ -227,6 +227,7 @@
       ]
     }
   ],
+  "FormViewUuid": "f737ee4d-e01a-4b3c-acf0-0d241519e980",
   "HandledEvents": [
     "RefreshClient",
     "ClosingClient",

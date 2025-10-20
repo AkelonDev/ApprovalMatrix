@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace Akelon.ApprovalTaskExtension.Shared
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
 
   }

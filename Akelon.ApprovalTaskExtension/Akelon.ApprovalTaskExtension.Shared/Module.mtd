@@ -38,7 +38,6 @@
       "ItemId": "fda26839-dde5-4b81-998b-382575b0189e"
     }
   ],
-  "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "Akelon.ApprovalTaskExtension",
@@ -48,7 +47,6 @@
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "Akelon.ApprovalTaskExtension",
-  "ResourcesKeys": [],
   "ServerAssemblyName": "Akelon.ApprovalTaskExtension.Server",
   "ServerNamespace": "Akelon.ApprovalTaskExtension.Server",
   "SharedAssemblyName": "Akelon.ApprovalTaskExtension.Shared",
@@ -59,11 +57,11 @@
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",

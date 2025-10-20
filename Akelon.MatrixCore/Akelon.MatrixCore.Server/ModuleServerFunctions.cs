@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace Akelon.MatrixCore.Server
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
     /// <summary>
     /// Вычислить исполнителей по матрице согласования.
