@@ -236,6 +236,7 @@
   "IconResourcesKeys": [],
   "IntegrationServiceName": "MatrixCoreApprovalMatrix",
   "IsStatusEnabled": true,
+  "ListViewUuid": "eb469fc0-647c-4934-b5bb-ffb93f5b446c",
   "OperationsClass": "",
   "Overridden": [
     "IsStatusEnabled"
